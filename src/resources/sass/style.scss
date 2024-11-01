@@ -1,0 +1,82 @@
+@import "reset.scss";
+@import "base/fonts";
+@import "base/variables";
+@import "base/text";
+@import "base/base_elements";
+@import "base/buttons";
+@import "base/slider";
+@import "base/collaps";
+@import "base/form";
+@import "base/sidebar";
+@import "base/footer";
+@import "base/corrections";
+@import "base/mod";
+@import "base/animations";
+
+@import "pages/main";
+@import "pages/lk";
+@import "pages/about";
+@import "pages/course";
+@import "pages/calendar";
+@import "pages/teaching";
+@import "pages/shop";
+@import "pages/payment";
+@import "pages/settings";
+@import "pages/about-the-groups";
+@import "pages/login";
+
+html,
+body {
+    font-family: "Hauora-Regular", sans-serif;
+    background-color: #faf9f6;
+    color: $text-color;
+    font-size: 15px;
+    //overflow-x: hidden;
+    box-sizing: border-box;
+    outline: none;
+    letter-spacing: 0px;
+    transition: 0.2s;
+    position: relative;
+}
+
+.wrapper {
+    width: 1150px;
+    max-width: calc(100% - 20px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-wrapper {
+    display: flex;
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        max-width: calc(100% - 40px);
+    }
+}
+
+@media (min-width: 992px) {
+    .page-wrapper {
+        gap: 70px;
+    }
+}
+
+.hide-for-desc {
+    display: none;
+    @media (max-width: 991px) {
+        display: flex;
+    }
+}
+
+.white-hr {
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin-top: 20px;
+    background: #ffffff;
+}
+
+.first-letter-uppercase::first-letter {
+    text-transform: uppercase;
+}

@@ -1,0 +1,18 @@
+@keyframes easeInOut {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(50%);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+//.anim-for-modal-form {
+//    animation: easeInOut .5s ease-in-out;
+//}

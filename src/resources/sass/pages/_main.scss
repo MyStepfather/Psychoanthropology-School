@@ -1,0 +1,171 @@
+.main {
+    width: 100%;
+
+    @media (min-width: 992px) {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        grid-template-areas:
+            "news news"
+            "wrapper stans";
+        gap: 25px;
+    }
+
+    .btn_white {
+        @media (min-width: 992px) {
+            font-size: 12px;
+        }
+    }
+
+    .news {
+        grid-area: news;
+        position: relative;
+        background: #c6dcdf;
+
+        &__title {
+            margin: 20px 0 8px 0;
+            text-align: start;
+        }
+
+        &__descr {
+            margin-top: 20px;
+        }
+
+        &__slides {
+            margin-top: 25px;
+            padding-bottom: 55px;
+        }
+
+        &__img {
+            width: 100%;
+            aspect-ratio: 16/9;
+            margin-top: 19px;
+            border-radius: 15px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            @media (min-width: 992px) {
+                height: 277px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .title_fz23_mob {
+                margin-left: 7%;
+            }
+        }
+    }
+
+    .stans {
+        grid-area: stans;
+        background: #d4e5e7;
+        cursor: unset;
+
+        .accordion-item .title_fz23_mob {
+            @media (min-width: 992px) {
+                font-size: 30px;
+                font-weight: 700;
+                line-height: 130%;
+            }
+        }
+    }
+
+    .custom_show {
+        @media (min-width: 992px) {
+            display: block;
+        }
+    }
+    .stans_music {
+        @media (min-width: 992px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .stans_all {
+        cursor: pointer;
+        @include hover_txt;
+    }
+
+    .stans_content_active {
+        display: block;
+        transition: 0.5s all;
+    }
+
+    .stans_btn_download {
+        cursor: pointer;
+    }
+    .stans_btn_listen {
+        width: 115px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .act_exercise {
+        background: #e2eeef;
+        @media (min-width: 992px) {
+            background: #d4e5e7;
+        }
+    }
+
+    .event {
+        background: #eef5f5;
+        @media (min-width: 992px) {
+            background: #d4e5e7;
+        }
+        .title_fz18_mob {
+            font-size: 18px;
+        }
+    }
+
+    .main-wrapper__exercize-event {
+        grid-area: wrapper;
+    }
+
+    .form_to_school {
+        background: #ffffff;
+        @media (min-width: 992px) {
+            display: none;
+        }
+    }
+
+    .collaps_body {
+        display: none;
+    }
+}
+/* .accordion-button {
+    @media(min-width: 992px) {
+        pointer-events: none;
+    } */
+
+.mod {
+    &__title {
+        @media (min-width: 992px) {
+            font-size: 23px;
+        }
+    }
+    &__btn {
+        margin-left: 0;
+        padding: 10px 50px;
+    }
+}
+
+/* Ширина input`ов в модальном окне */
+#topic_form_main,
+#input_txt_main {
+    max-width: 314px;
+}
+
+body
+    > div.wrapper.page-wrapper
+    > section
+    > div.form_to_school.box_content.mb-5
+    > div.collaps_body.mt-5.animate__animated.animate__fadeIn
+    > div.btn_dark.mt-5 {
+    max-width: 314px;
+    width: unset;
+    margin-left: unset;
+}

@@ -1,0 +1,82 @@
+.calendar {
+    width: 100%;
+    border-radius: 15px;
+
+    @media (min-width: 992px) {
+        display: grid;
+        gap: 25px;
+    }
+}
+.my-container-border {
+    padding-bottom: 50px;
+    @media (min-width: 992px) {
+        padding: 30px;
+        border: 1px solid #E0E0E0;
+        border-radius: 15px;
+    }
+}
+
+.groups-today {
+    &__inner {
+        &_blue {
+            background: $bg_blue;
+        }
+    }
+}
+
+.events-box {
+    margin-top: 20px;
+}
+
+.calendar {
+/*     &__title {
+
+    } */
+    &__close {
+        background-color: $bg_blue;
+    }
+    &__date {
+        margin-top: 20px;
+    }
+    &__info {
+        margin-top: 1px;
+    }
+    &__btn {
+        margin-top: 20px;
+        width: 186px;
+        height: 44px;
+        font-family: 'Hauora-Regular';
+        font-weight: 700;
+        line-height: 160%;
+    }
+}
+
+.events {
+    &__title {
+        margin-top: 10px;
+    }
+    &__list {
+        margin-top: 5px;
+    }
+    &__item {
+        margin-top: 5px;
+    }
+}
+
+.calendar-reg {
+    max-width: 460px;
+    &__main-container {
+        margin-top: 10px;
+        margin-bottom: 48px;
+    }
+    &__container {
+        margin-top: 25px;
+    }
+    &__title {
+        margin-top: 10px;
+    }
+    &__list {
+        list-style: auto;
+        margin-left: 20px;
+    }
+}

@@ -1,0 +1,59 @@
+.accordion-button:not(.collapsed) {
+    background-color: unset;
+    color: black;
+}
+
+.accordion-button:focus {
+    border-color: unset;
+    box-shadow: unset;
+}
+
+.stans, .custom_plus {
+    .accordion-button {
+        &::after {
+            background: url(../../img/icons/ClosedPlus.svg) no-repeat 50%/cover;
+            // margin-left: 0px;
+            width: 25px;
+            height: 25px;
+            right: 10px;
+        }
+    }
+
+    .accordion-button:not(.collapsed)::after {
+        background: url(../../img/icons/OpenedMinus.svg) no-repeat 50%/cover;
+        width: 25px;
+        height: 25px;
+    }
+}
+
+.stans {
+    .accordion-button {
+        &::after {
+            @media (min-width: 992px) {
+                display: none;
+            }
+        }
+    }
+}
+
+.sidebar {
+    .accordion {
+        width: 100%;
+    }
+
+    .accordion-button {
+        background-color: unset;
+    }
+}
+
+.accordion-item {
+    background-color: unset;
+    border: unset;
+}
+
+.accordion-button {
+    background-color: unset;
+    box-shadow: none !important;
+}
+
+

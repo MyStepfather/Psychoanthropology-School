@@ -1,0 +1,205 @@
+.about {
+
+    @media (min-width: 992px) {
+        width: 100%;
+        border: 1px solid #D9D9D9;
+        border-radius: 15px;
+        padding: 30px;
+        padding-top: 0;
+        margin-bottom: 78px;
+    }
+}
+.about-container {
+    position: relative;
+}
+.about__title {
+    background: #E2EEEF;
+    @media (min-width: 992px) {
+        background-color: unset;
+        padding-left: 0;
+        padding-bottom: 0;
+        display: none;
+    }
+}
+
+.history-school__span {
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: calc(100% - 78px);
+        top: 22px;
+        left: 1px;
+        background-color: #000;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        background: url('../img/icons/point.svg') no-repeat 50%/contain;
+        left: -7px;
+        top: 14px;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+}
+
+.history-school__point {
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        border-radius: 100%;
+        background-color: $text-color;
+        left: -24px;
+        top: 12px;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+}
+
+.structure-school {
+    @media (min-width: 992px) {
+        max-width: 460px;
+    }
+}
+
+
+.structure-school__list {
+    padding-left: 20px;
+    li {
+        list-style: disc;
+    }
+}
+
+.structure-school_head {
+        background: #E2EEEF;
+        width: max-content;
+        padding: 10px 15px;
+}
+
+.contact-school {
+   .box_content {
+        background-color: #ffffff;
+    }
+}
+
+.structure-school__region {
+    background: #E2EEEF;
+    padding: 10px 15px;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+.structure-school__person {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.structure-school__icon-person {
+    width: 18px;
+    height: 18px;
+}
+
+
+.tab_about {
+        @media (min-width: 992px) {
+            display: none !important;
+        }
+}
+
+#accordionRus {
+    display: none;
+    @media (min-width: 992px) {
+        display: block;
+        // margin-left: 20px;
+        // padding: 0;
+    }
+    .box_content {
+        padding: 10px 15px;
+    }
+}
+
+#headingRus {
+    background-color: #E2EEEF;
+    border-radius: 15px;
+    padding: 10px 0 10px 20px;
+}
+
+#btn-modal_structure-rus {
+    display: block;
+    @media (min-width: 992px) {
+        display: none;
+    }
+}
+
+#structure-school_head {
+    display: none;
+    @media (min-width: 992px) {
+        display: block;
+    }
+}
+.about-structure {
+    &-wrapper {
+        background: #E2EEEF;
+        margin-left: 40px;
+        cursor: pointer;
+        padding: 10px 0;
+        min-height: 27px;
+        display: flex !important;
+        align-items: center;
+        padding-left: 20px;
+        position: relative;
+        max-width: 315px;
+        @media(min-width: 992px) {
+            max-width: 360px;
+        }
+    }
+    &-btn {
+        width: 100%;
+    }
+}
+.mb-10 {
+    margin-bottom: 10px;
+}
+.bcg-about {
+    background: #E2EEEF;
+}
+
+@media(min-width:992px) {
+    .not-for-desk {
+        display: none !important;
+    }
+}
+
+@media(max-width:991px) {
+    .not-for-mob {
+        display: none !important;
+    }
+}
+
+.no-bgc {
+    background-color: unset;
+}
+
+#collapseRus > div {
+    margin-top: 10px !important;
+    margin-left: 40px;
+}
+
+#accordionRus .box_content {
+    padding-left: 30px;
+}
+#accordionEastSibirRus {
+    margin-bottom: 0;
+}
+#popup_structure-rus > div > div {
+    background-color: #FAF9F6;
+}

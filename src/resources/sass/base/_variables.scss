@@ -1,0 +1,12 @@
+$text-color: #102F39;
+$bg_blue: #E2EEEF;
+/* $bg_red: #F8F0E4; */
+
+@mixin hover_txt { /* - смена цвета у текста с ссылкой */
+    @media (min-width: 992px) {
+        transition: all 0.2s;
+        &:hover {
+            color: #8DAAAC;
+        }
+    }
+}

@@ -1,0 +1,371 @@
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -300;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+// Написать в школу
+
+.mod-hide {
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: -1;
+}
+
+.mod-vis {
+    opacity: 1 !important;
+    z-index: 10000;
+    pointer-events: auto !important;
+    // position: fixed;
+}
+
+.mod-hide-slide-vertical {
+    pointer-events: none;
+    top: 100%;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: -1;
+}
+
+.mod-vis-vertical {
+    top: 0;
+    z-index: 10000;
+    pointer-events: auto;
+    // position: fixed;
+}
+
+.mod-container-school {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    //position: fixed;
+    border-radius: 0;
+    height: 100vh;
+    overflow-y: scroll;
+
+    @media (min-width: 992px) {
+        height: unset;
+        max-width: 992px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 15px;
+
+    }
+}
+
+.mod-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.mod-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.mod-input {
+    height: 44px;
+    background-color: #F2F2F2;
+    border-radius: 15px;
+    padding: 10px 0 10px 15px;
+    width: 100%;
+    max-width: 314px;
+}
+
+.mod-text-area {
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #BDBDBD;
+    border-radius: 15px;
+    padding: 12px 3px 13px 15px;
+}
+
+.mod-school-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: scroll;
+}
+
+// Группы Чтения
+
+.mod-container-reading {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 25px 17px 15px;
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+    height: 100vh;
+
+    @media (min-width: 992px) {
+        // height: unset;
+        // max-width: 992px;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+        // border-radius: 15px;
+        display: none;
+    }
+}
+
+.mod-body-reading {
+    overflow-y: scroll;
+}
+
+.mod-nav-reading {
+    width: 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.mod-header-reading {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    height: 30px;
+}
+
+.mod-cross-reading {
+    position: absolute;
+    right: 0;
+    top: -5px;
+}
+
+.mod-popup-reading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mod-btn-reading {
+    border-radius: 30px;
+    background: #102F39;
+    color: #fff;
+    padding: 10px 25px;
+}
+
+// Сообщить об изменениях
+
+.mod-container-changes {
+    padding: 21px;
+    border-radius: 15px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    background-color: #fff;
+    height: 100vh;
+
+    @media(min-width: 642px) {
+        background-color: transparent;
+        border-radius: 15px;
+        border: 1px solid #E0E0E0;
+        height: unset;
+        left: unset;
+        right: unset;
+        position: absolute;
+
+    }
+}
+
+.mod-header-changes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.mod-body-changes {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+// Карточка ученика
+
+.mod-container-student {
+    padding: 16px 14px 36px 25px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    border-radius: 0;
+    background-color: #fff;
+    height: 100vh;
+
+    @media(min-width: 642px) {
+        background-color: transparent;
+        border-radius: 15px;
+        border: 1px solid #E0E0E0;
+        position: absolute;
+        height: unset;
+
+
+
+
+
+    }
+}
+
+.mod-header-student {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.student-ico {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%
+}
+
+.mod-body-student {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+    overflow-y: scroll;
+
+    @media(min-width: 992px) {
+        gap: 20px;
+        margin-top: 30px;
+        overflow-y: auto;
+    }
+}
+
+.student-info,
+.student-contacts {
+    padding: 15px 20px;
+    background-color: #FBF6EF;
+    border-radius: 15px;
+
+    @media(min-width: 642px) {
+        background-color: transparent;
+        padding: unset;
+        border-radius: unset;
+    }
+}
+
+// Настройки группы
+.mod-container-settings {
+    padding: 30px 25px;
+    width: 100%;
+    //left: 0;
+    //right: 0;
+    //position: fixed;
+    border-radius: 0;
+    background-color: #fff;
+    //height: 100vh;
+    //overflow: scroll;
+    @media(min-width: 642px) {
+        background-color: transparent;
+        border-radius: 15px;
+        border: 1px solid #E0E0E0;
+        //position: absolute;
+        //height: unset;
+        //overflow: unset;
+    }
+
+}
+
+.modal-header-settings {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.modal-body-settings {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: scroll;
+    max-height: 600px;
+}
+
+//Карточка Координатора
+
+.mod-container-coordinator {
+    padding: 16px 14px 36px 25px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    border-radius: 0;
+    background-color: #fff;
+    height: 100vh;
+    @media(min-width: 642px) {
+        background-color: transparent;
+        border-radius: 15px;
+        border: 1px solid #E0E0E0;
+        position: absolute;
+        height: unset;
+    }
+}
+.mod-header-coordinator {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.display-flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.lk-mod {
+    position: absolute;
+    top: 0;
+    padding: 15px 20px;
+    border: 1px solid #E0E0E0;
+    border-radius: 15px;
+
+}
+
+.lk-mod-hide {
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s;
+
+}
+.lk-mod-vis {
+    opacity: 1;
+    pointer-events: auto;
+}

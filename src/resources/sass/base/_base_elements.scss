@@ -1,0 +1,289 @@
+.box {
+    &_content {
+        border-radius: 15px;
+        padding: 20px 15px;
+        margin-bottom: 15px;
+        @media (min-width: 992px) {
+            padding: 30px 25px;
+        }
+        &-modal {
+            padding: 0 20px 20px;
+            @media (min-width: 992px) {
+                padding: 0 30px 30px;
+            }
+        }
+        &_mod {
+            padding: 20px 15px;
+            margin-bottom: 0;
+        }
+        &_green {
+            background-color: #e2eeef;
+        }
+        &_white {
+            background-color: #fff;
+        }
+    }
+    &__tabs {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 10px;
+        column-gap: 30px;
+        &__title {
+            margin-bottom: 10px;
+        }
+        &__wrapper {
+            @media (min-width: 992px) {
+                display: none;
+            }
+        }
+    }
+}
+
+.icon_modal {
+    display: inline-block;
+    position: relative;
+    &::after {
+        content: "";
+        background-image: url(../img/icons/popup.svg);
+        position: absolute;
+        right: 10px;
+        width: 25px;
+        height: 25px;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+.my-container-border {
+    @media (min-width: 992px) {
+        padding: 30px;
+        background-color: #faf9f6;
+        border: 1px solid #e0e0e0;
+        border-radius: 15px;
+    }
+    /* Для рамок-оберток внутри рамки-обертки */
+    &_in-page {
+        background-color: #faf9f6;
+        border: 1px solid #e0e0e0;
+        border-radius: 15px;
+        padding: 15px 15px !important;
+        margin-bottom: 0 !important;
+        margin-top: 35px;
+        @media (min-width: 992px) {
+            padding: 15px 30px !important;
+        }
+    }
+}
+
+.checkboxes {
+    margin-right: 5px !important;
+}
+
+.hidden-for-desk {
+    @media (min-width: 992px) {
+        display: none;
+    }
+}
+
+.hidden-for-mob {
+    display: none;
+    @media (min-width: 992px) {
+        display: block;
+    }
+}
+
+select {
+    cursor: pointer;
+}
+
+.tooltip-money {
+    position: relative;
+}
+
+.tooltip-money .tooltiptext {
+    position: absolute;
+    width: max-content;
+    opacity: 0;
+    right: 40px;
+    top: 0;
+    z-index: 1;
+    padding: 5px 15px;
+
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    background: #faf9f6;
+    box-shadow: 0px 4px 11px 1px rgba(58, 69, 88, 0.2);
+
+    color: #102f39;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+
+    transition: 0.2s;
+    pointer-events: none;
+}
+
+.tooltip-money:hover .tooltiptext {
+    opacity: 1;
+}
+
+@media (max-width: 800px) {
+    body
+        > div.wrapper.page-wrapper
+        > section
+        > div.form_to_school.box_content.mb-5 {
+        margin-bottom: unset !important;
+    }
+}
+
+.checkbox__box {
+    position: relative;
+    width: 24px !important;
+    height: 24px !important;
+    background: #ffffff;
+    border: 1px solid rgba(58, 69, 88, 0.5);
+    border-radius: 3px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    flex-shrink: 0;
+}
+
+.checkbox__box:checked::after {
+    content: url("../../../img/icons/check-for-checkbox.svg");
+    color: #102f39;
+    display: block;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+}
+
+/* Стили для выпадающего списка */
+.dropdown {
+    // overflow-y: hidden;
+    position: relative;
+    width: 100%;
+    border-radius: 15px;
+    cursor: pointer;
+    &::after {
+        // content: url("../../../assets/img/icons/select-arrow.svg");
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translate(0, -50%);
+        pointer-events: none;
+    }
+    &--day {
+        max-width: 65px;
+    }
+    &--hide {
+        @media (max-width: 362px) {
+            position: relative;
+            width: 100%;
+            border-radius: 15px;
+            cursor: pointer;
+            &::after {
+                content: "";
+                position: absolute;
+                right: 15px;
+                top: calc(50% - 12px);
+                pointer-events: none;
+            }
+        }
+    }
+    &__year {
+        background-color: #faf9f6;
+        border: none;
+    }
+}
+.dropdown-for-livewire {
+    // overflow-y: hidden;
+    position: relative;
+    width: 100%;
+    border-radius: 15px;
+    cursor: pointer;
+
+    &::after {
+        // content: url("../../../assets/img/icons/select-arrow.svg");
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translate(0, -50%);
+        pointer-events: none;
+    }
+
+    &--day {
+        max-width: 65px;
+    }
+}
+.dropdown__selected {
+    position: relative;
+    padding: 10px;
+    background: #f2f2f2;
+    border-radius: 15px;
+    // font-weight: 700;
+    font-size: 15px;
+    line-height: 160%;
+    color: #102f39;
+    &::after {
+        content: '';
+    position: absolute;
+    right: 5%; /* Позиционирование справа */
+    top: 50%;
+    transform: translateY(-50%); /* Центрирование по вертикали */
+    width: 0; 
+    height: 0; 
+    border-left: 6px solid transparent; /* Левая часть стрелки */
+    border-right: 6px solid transparent; /* Правая часть стрелки */
+    border-top: 9px solid #102F39; /* Верхняя часть стрелки */
+    border-radius: 3px; /* Скругление углов стрелки */
+    pointer-events: none; 
+    }
+    &--active {
+        border-radius: unset;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    &--no-bg {
+        background: transparent;
+    }
+    &_no-bgc {
+        background: unset;
+    }
+}
+
+.selected {
+    display: none;
+}
+
+.dropdown__list {
+    background: #f2f2f2;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+    z-index: 100;
+    max-height: 200px;
+    overflow-y: auto;
+    &_no-bgc {
+        background: #faf9f6;
+    }
+    &--second-var {
+        border-bottom-left-radius: unset;
+        border-bottom-right-radius: unset;
+        border-radius: 15px;
+    }
+}
+
+.dropdown__list.visible {
+    display: block;
+}
+
+.dropdown__item {
+    padding: 10px;
+}

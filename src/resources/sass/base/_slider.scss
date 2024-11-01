@@ -1,0 +1,50 @@
+.main {
+
+    .news {
+        
+
+        .carousel-caption {
+            position: relative;
+            left: 0;
+            padding-bottom: 0;
+            text-align: start;
+        }
+        
+        .carousel-indicators {
+            position: relative;
+        }
+        
+        .carousel-control-next, .carousel-control-prev {
+            position: relative;
+            width: 40px;
+
+            @media (min-width: 992px) {
+                    position: absolute;
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .carousel-inner {
+                width: 85%;
+                margin: auto; 
+            }
+        }
+        
+        .carousel-indicators {
+            margin: 0;
+            button {
+                width: 8px;
+                height: 8px;
+                border: 0;
+                border-radius: 50px;
+            }
+            @media (min-width: 992px) {
+                position: absolute;
+            }
+        }    
+    }
+
+
+
+
+}

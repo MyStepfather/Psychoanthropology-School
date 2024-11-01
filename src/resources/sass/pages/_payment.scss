@@ -1,0 +1,99 @@
+.my-container-border--diflex {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.participants-list__status--m0 {
+    margin-left: 0;
+    cursor: pointer;
+}
+.temp-style {
+    all: unset !important;
+}
+.payment {
+    margin-top: 80px;
+    &__head-wrapper {
+        display: flex;
+        position: relative;
+        align-items: center;
+        gap: 25px;
+    
+    }
+    &__title {
+        display: inline;
+    }
+    &__ico {
+        height: 24px;
+    }
+}
+.debts {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    &__months {
+        background: #A03535;
+        border-radius: 15px;
+        padding: 4px 10px;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 18px;
+        @media (min-width: 992px) {
+            border-radius: 15px;
+
+        }
+    }
+}
+.date-picker {
+    position: relative;
+    max-width: 70px;
+    &::after {
+        content: "▼";
+        position: absolute;
+        right: 0;
+        margin-top: -2px;
+        pointer-events: none;
+    }
+    &__years {
+        border: none;
+        background-color: inherit;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        font-size: 15px;
+        font-weight: 700;
+        width: 80px;
+        option {
+            font-weight: 700 !important;
+            font-size: 15px;
+            line-height: 160%;
+            color: #102F39;
+        }
+    }
+}
+
+.months {
+    &__list {
+        margin-top: 20px;
+    }
+    &__item {
+        display: flex;
+        flex-direction: row;
+        justify-content:flex-start;
+        margin-top: 15px;
+        align-items: center;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    &__name {
+        margin-left: 20px;
+    }
+    &__sum {
+        margin-top: 20px;
+    }
+    &__checkbox {
+
+    }
+}

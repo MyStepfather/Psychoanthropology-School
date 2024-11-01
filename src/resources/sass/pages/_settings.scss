@@ -1,0 +1,267 @@
+.bgc-wt-mob {
+    background-color: #fff;
+    @media screen and (min-width: 992px) {
+        background-color: unset;
+    }
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mt-15 {
+    margin-top: 15px;
+}
+
+.my-settings {
+    @media (min-width: 992px) {
+        margin-top: 80px;
+    }
+}
+
+.hidden-desk {
+    @media (max-width: 992px) {
+        display: none !important;
+    }
+}
+
+.my-settings {
+    width: 100%;
+    &__label {
+        margin-top: 80px;
+        @media (min-width: 992px) {
+            margin-top: 0;
+        }
+    }
+    &__header-wrapper {
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        @media (min-width: 992px) {
+            display: none;
+        }
+    }
+    &__tabs {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    &__tab {
+        display: flex;
+        gap: 10px;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 150%;
+        align-items: center;
+        padding: 0;
+
+        &-active {
+            background: #e2eeef;
+            padding: 3px 13px;
+        }
+        &-pic {
+            max-width: 22px;
+            max-height: 22px;
+        }
+    }
+    &__mob {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        @media (min-width: 992px) {
+            display: none;
+        }
+    }
+    &__item {
+        display: flex;
+        gap: 10px;
+    }
+}
+.users-data {
+    &__wrapper {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        &_row {
+            flex-direction: row;
+        }
+    }
+    &__input-wrapper {
+        max-width: 355px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* gap: 30px; */
+        &_column {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+    }
+    &__label {
+        font-family: "Hauora-Bold", sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 150%;
+    }
+    &__input {
+        width: 100%;
+        max-width: 260px;
+        height: 44px;
+        background-color: #f2f2f2;
+        border-radius: 15px;
+        padding: 10px 0 10px 15px;
+        &--wide {
+            max-width: 350px;
+        }
+    }
+    &__list {
+        background-color: #f2f2f2;
+        border-radius: 15px;
+        border: none;
+        padding: 10px 40px 10px 15px;
+        appearance: none;
+        width: 313px;
+        height: 44px;
+        &-padding {
+            padding: 10px 15px 10px 15px;
+        }
+        &_mod {
+            width: 100%;
+        }
+        &_no-width {
+            width: auto;
+        }
+    }
+    &__btn {
+        margin-top: 30px;
+    }
+}
+.fake-wrapper-list {
+    position: relative;
+    width: 313px;
+    &_mod {
+        width: 100%;
+        max-width: 370px;
+    }
+    &::after {
+        content: "▼";
+        position: absolute;
+        right: 15px;
+        top: calc(50% - (21px / 2.5));
+        pointer-events: none;
+    }
+    &_no-width {
+        width: auto;
+    }
+}
+.users-photo {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    &__wrapper {
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+    &__curent {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &__settings {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__btns-wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    }
+    &__red-btn {
+        padding: 5px 15px 6px 15px;
+        height: 30px;
+        transition: 0.2s;
+        opacity: 1;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+    &__white-btn {
+        padding: 5px 15px 6px 15px;
+        height: 30px;
+        border: 1px solid #102f39;
+        padding: 5px 15px 6px 15px;
+        font-size: 12px;
+        font-weight: 700;
+        opacity: 1;
+        transition: 0.2s;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}
+
+.position-relative {
+    position: relative;
+}
+.users-date {
+    margin-top: 20px;
+    &__date-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__date-lists {
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+        &-gap {
+            justify-content: space-between;
+            gap: 3px;
+        }
+    }
+}
+.users-group {
+    width: 100%;
+    max-width: 310px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+    @media (min-width: 992px) {
+        margin-top: 20px;
+    }
+}
+.users-date-member {
+    margin-top: 20px;
+    @media (min-width: 992px) {
+        margin-top: 10px;
+    }
+}
+.checkbox {
+    &__wrapper {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+    &__box {
+        width: 24px;
+    }
+}
+.users-date-member-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 10px;
+    width: 100%;
+    max-width: 310px;
+}

@@ -1,0 +1,152 @@
+.main, .modal {
+  padding: 0 !important;
+}
+  .close { //modal
+    border: none;
+    background: none;
+    // position: fixed;
+    right: 5%;
+
+    @media (min-width: 576px) {
+      right: 15%;
+    }
+    @media (min-width: 992px) {
+      position: relative;
+      right: auto;
+    }
+
+    span {
+      font-size: 30px;
+      color: $text-color;
+    }
+  }
+
+  .modal-header { //modal
+    border-bottom: none;
+    padding: 20px 20px 0 20px !important;
+    @media (min-width: 992px) {
+      padding: 30px 30px 0 25px !important;
+    }
+  }
+
+
+  .form-select {
+    background-color: #F2F2F2;
+    border-radius: 15px;
+    background-image: url("../img/icons/arrowDown.svg");
+    background-size: auto;
+    &_no-width {
+      width: auto;
+    }
+    &_time {
+        width: 50px;
+      background-image: none;
+      padding: 5px 15px;
+    }
+  }
+
+  .form-select:focus {
+    border-color: none;
+    outline: 0;
+    box-shadow: none;
+  }
+
+  .input_txt {
+    max-width: 314px;
+    background-color: #F2F2F2;
+    border-radius: 15px;
+    color: $text-color;
+  }
+
+  .area_txt {
+    background: #FFFFFF;
+    border: 1px solid #BDBDBD;
+    border-radius: 15px;
+  }
+
+
+.modal-dialog {
+  // margin-right: auto;
+  margin-left: auto;
+  max-width: 800px;
+  margin-top: unset;
+}
+
+@media (max-width: 576px) {
+  .modal {
+    &-dialog {
+      // margin: 0 auto;
+      width: 100%;
+
+
+      &-centered {
+        height: 100vh;
+      }
+    }
+
+    &-content {
+      height: 100vh;
+      border: none;
+      border-radius: 0;
+    }
+  }
+}
+
+
+.modal-body_mod {
+  margin-top: 17px;
+}
+
+.form-btn {
+  margin: 0;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 314px;
+  &_width {
+    max-width: 314px;
+  }
+}
+
+.modal-dialog.modal-dialog-other {
+  // width: 400px;
+  // max-width: 400px !important;
+  margin-left: auto;
+  margin-right: unset;
+  @media (max-width: 992px) {
+    width: unset;
+  }
+}
+#form_to_group_settings > div {
+  right: 1%;
+  @media(max-width: 400px) {
+    right: 0;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+.modal.fade.show .modal-dialog {
+  animation-name: slideInFromRight;
+  animation-duration: 0.2s;
+}
+
+@keyframes slideOutToLeft {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(100%);
+  }
+}
+
+.modal.fade .modal-dialog {
+  animation-name: slideOutToLeft;
+  animation-duration: 0.5s;
+}
